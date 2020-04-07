@@ -6,9 +6,9 @@ Using Bootstrap, JavaScript, CSS, JQuery
 
 # Screenshots After Update
 
-![alt text](https://github.com/Bharti-Parmar/Replica-of-Google-Keep/blob/master/Screenshot%20from%202020-04-07%2014-35-04.png)
-![alt text](https://github.com/Bharti-Parmar/Replica-of-Google-Keep/blob/master/Screenshot%20from%202020-04-07%2014-35-08.png)
-![alt text](https://github.com/Bharti-Parmar/Replica-of-Google-Keep/blob/master/Screenshot%20from%202020-04-07%2014-35-36.png)
+![alt text](https://github.com/Bharti-Parmar/Replica-of-Google-Keep/blob/master/Screenshot%20from%202020-04-07%2014-47-20.png)
+![alt text](https://github.com/Bharti-Parmar/Replica-of-Google-Keep/blob/master/Screenshot%20from%202020-04-07%2014-47-22.png)
+![alt text](https://github.com/Bharti-Parmar/Replica-of-Google-Keep/blob/master/Screenshot%20from%202020-04-07%2014-47-24.png)
 
 #  screenshot Before Update
 
