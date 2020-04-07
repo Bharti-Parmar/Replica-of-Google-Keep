@@ -12,7 +12,7 @@
     margin-left:30px;
     height:30px;
     width:25px;
-}  
+}
 /*img2*/
 .img2{
     margin-top:12px;
@@ -20,16 +20,13 @@
     height:25px;
     width:25px;
 }
-/*headerr*/
-.headerr{
-    height:50px;
-}
+
 /*side navigation */
 
 
 .sidenav {
     height: 100%;
-    width: 30%;
+    width: 20%;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -37,12 +34,12 @@
     background-color: grey;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
+    padding-top: 70px;
 }
 
 .sidenav a {
     padding: 8px 8px 8px 32px;
-    text-decoration: none;
+    text-decoration: none !important;;
     font-size: 15px;
     color: white;
     display: block;
@@ -61,9 +58,11 @@
     margin-left: 50px;
 }
 
+
+
 #main {
     transition: margin-left .5s;
-    padding: 16px;
+    /* padding: 16px; */
 }
 
 @media screen and (max-height: 450px) {
@@ -88,13 +87,13 @@ border:0.5px solid lightgrey;
     font-size: 16px;
     background-color: #ffd633;
     background-image: url('searchicon.png');
-    background-position: 10px 10px; 
+    background-position: 10px 10px;
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
 }
 
 
-/* secound navigation 
+/* secound navigation
 
 
 .div1 {
@@ -105,14 +104,14 @@ border:0.5px solid lightgrey;
 }
 */
 .nav_1 input[type=text] {
-    width: 50%;
+    width: 75%;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
     background-color: white;
     background-image: url('searchicon.png');
-    background-position: 10px 10px; 
+    background-position: 10px 10px;
     background-repeat: no-repeat;
     padding: 12px 20px 10px 40px;
     -webkit-transition: width 0.4s ease-in-out;
@@ -120,7 +119,7 @@ border:0.5px solid lightgrey;
 }
 
 .nav_1 input[type=text]:focus {
-    width: 60%;
+    width: 90%;
 }
 
 
@@ -210,29 +209,29 @@ ul li{
 .slide {
     /* The name of the animation */
     animation-name: slide;
-    -webkit-animation-name: slide; 
+    -webkit-animation-name: slide;
     /* The duration of the animation */
-    animation-duration: 1s; 
+    animation-duration: 1s;
     -webkit-animation-duration: 1s;
     /* Make the element visible */
-    visibility: visible; 
+    visibility: visible;
 }
 
 @keyframes slide {
     0% {
         opacity: 0;
         -webkit-transform: translateY(70%);
-    } 
+    }
     100% {
         opacity: 1;
         -webkit-transform: translateY(0%);
-    } 
+    }
 }
 @-webkit-keyframes slide {
     0% {
         opacity: 0;
         -webkit-transform: translateY(70%);
-    } 
+    }
     100% {
         opacity: 1;
         -webkit-transform: translateY(0%);

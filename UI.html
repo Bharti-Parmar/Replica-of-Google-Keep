@@ -2,19 +2,25 @@
 <html lang="en">
 	<head>
 		<title> Google Keep UI </title>
-		<meta charset="utf-8">	
+		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
+
 		<!-- code.css -->
 		<link rel="stylesheet" type="text/css" href="code.css">
 
 		<!-- coded.js -->
 		<link href="coded.js" type="text/js">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic.min.css">
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
 	</head>
 
 	<style>
-		
+
 		* {
 		    box-sizing: border-box;
 		}
@@ -25,7 +31,7 @@
 		    display: block;
 		}
 
-		[class*="col-"] {
+		[class*="col-lg-"] {
 		    float: left;
 		 }
 
@@ -33,35 +39,45 @@
 		    font-family: "Lucida Sans", sans-serif;
 		}
 
-		.col-1 {width: 8.33%;}
-		.col-2 {width: 16.66%;}
-		.col-3 {width: 25%;}
-		.col-4 {width: 33.33%;}
-		.col-5 {width: 41.66%;}
-		.col-6 {width: 50%;}
-		.col-7 {width: 58.33%;}
-		.col-8 {width: 66.66%;}
-		.col-9 {width: 75%;}
-		.col-10 {width: 83.33%;}
-		.col-11 {width: 91.66%;}
-		.col-12 {width: 100%;}
+		input[type=text] {
+		  border: none;
+		}
 
-		@media only screen and (max-width: 768px) {
-		 
-		    [class*="col-"] {
+		textarea {
+		  border: none;
+		}
+
+		/* .col-lg-1 {width: 8.33%;}
+		.col-lg-2 {width: 16.66%;}
+		.col-lg-3 {width: 25%;}
+		.col-lg-4 {width: 33.33%;}
+		.col-lg-5 {width: 41.66%;}
+		.col-lg-6 {width: 50%;}
+		.col-lg-7 {width: 58.33%;}
+		.col-lg-8 {width: 66.66%;}
+		.col-lg-9 {width: 75%;}
+		.col-lg-10 {width: 83.33%;}
+		.col-lg-11 {width: 91.66%;}
+		.col-lg-12 {width: 100%;} */
+
+		/* @media only screen and (max-width: 768px) {
+
+		    [class*="col-lg-"] {
 		        width: 100%;
 		    }
-		}
+		} */
 
 		</style>
 
-	<body style="background-color:lightgrey;">
+<body style="background-color:lightgrey;">
 
+
+<div class="container-fluid">
 <!-- nav 2 -->
-<!--headerr-->			
+<!--headerr-->
 
-		<div class="row headerr" style="background-color:#ffcc00">
-			<div class="col-1">
+		<div class="row" style="background-color:#ffcc00">
+			<div class="col-lg-1">
 			<!--	<nav class="nav_2" style="margin-left:10px;margin-top:10px;">
 					<div class="div1"></div>
 					<div class="div1"></div>
@@ -69,8 +85,8 @@
 				 </nav>
 				 -->
 				 <div id="mySidenav" class="sidenav">
-<!--side navigation-->					  
-					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<!--side navigation-->
+					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="background-color:grey;">&times;</a>
 					  <a href="#">Notes</a>
 					  <a href="#">Reminder</a><hr>				<!--hr-->
 					  <a href="#">Labels</a>
@@ -83,203 +99,194 @@
 					  <a href="#">Help</a><hr>					<!--hr-->
 					  <a href="#">App Download</a>
 					  <a href="#">Keyboard Shortcuts</a>
-					  <div>
-					  	<h5 ><span href="#" style="margin-left:40px;color:white;">Privacy</span>
-					    <span href="#" style="margin-left:40px;color:white;">Terms</span></h5>
-					  <span style="margin-left:20px;color:white;">Open Source Licenses</span>
-					  </div>
+					  <!-- <div> -->
+					  	<h5 class="mt-5">
+								<span href="#" class="text-white" style="margin-left: 30px;cursor:pointer;">Privacy</span>
+					      <span href="#" class="text-white" style="margin-left: 30px;cursor:pointer;">Terms</span>
+						  </h5>
+					  <!-- </div> -->
+						 <span class="text-white" style="margin-left: 30px;cursor:pointer;">Open Source Licenses</span>
 					</div>
 
-					<div id="main">
-					 
-					  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+					<div id="main" class="mt-3 ml-2">
+					  <span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776;</span>
 					</div>
-
-					<script>
-					function openNav() {
-					    document.getElementById("mySidenav").style.width = "250px";
-					    document.getElementById("main").style.marginLeft = "250px";
-					}
-
-					function closeNav() {
-					    document.getElementById("mySidenav").style.width = "0";
-					    document.getElementById("main").style.marginLeft= "0";
-					}
-					</script>
-     
-		
 			</div>
-			
-			<div class="col-2">	
-				<h2 style="color:grey;margin-top:6px;">Google Keep</h2> 
-			</div>	
+
+			<div class="col-lg-2">
+				<h2 class="text-dark mt-3">Google Keep</h2>
+			</div>
 
 
 <!-- google search -->
-			<div class="google_search">
-				<div class="col-6">
-					<input type="text" name="search" placeholder="Google Notes Search...">
-				</div>
-			</div>
-
-			<div class="col-3"> 
-<!--refresh-->
-<!--img2-->
-				<img src="image\refresh.png" alt="refresh" class="img2">
-<!--grid view-->
-				<img src="image\single.png" onclick='changeImage("image\griddd.png")' alt="gridimage" class="img1">
-					<!--script -->
-					<script type="text/javascript">
-					    function changeImage(a) {
-					        document.getElementById("img").src=a.src;
-					    }
-					</script>
-<!--img1-->
-				<img src="image\gridd.png" alt="multigridimage" style="margin-left:35px;margin-bottom:6px;width:20px;height:20px">
-<!--bell-->
-				<img src="png image\bell.png" alt="bell" class="img1">
-			</div>
-		</div>
-		
-
-<!-- aside -->
-
-		<aside>
-			<div class="row">
-
-				<div class="col-4">
-					
-				</div>
-<br /><br />
-				<div class="col-8"> 
-					<div class="nav_1">				<!--nav_1-->
-<!--take a note-->
-						<input type="text" name="search" placeholder="TAKE A NOTES...">
+			<!-- <div class="google_search"> -->
+				<div class="col-lg-6">
+					<div class="form-group mt-3">
+					  <input type="text" class="form-control" name="search" placeholder="Google Notes Search..." id="usr">
 					</div>
-<br /><br /><br /><br />
-<!--cards-->					
+				</div>
+			<!-- </div> -->
+
+				<div class="col-lg-3">
+					<!--bell-->
+									<!-- <img src="image\images.png" alt="bell" class="img1 float-right"> -->
+
+									<span class="float-right mt-4 ml-3 mr-3"><i class="fa fa-user-circle" aria-hidden="true" style="font-size: 23px;"></i></span>
+					<!--img1-->
+							  	<span class="float-right mt-4 ml-3 mr-3"> <i class="fa fa-th" aria-hidden="true" style="font-size: 23px;"></i></span>
+							  	<span class="float-right mt-4 ml-3 mr-5"> <i class="fa fa-cog" aria-hidden="true" style="font-size: 23px;"></i></span>
+				  <!--grid view-->
+									<span class="float-right mt-4 ml-3 mr-3"><i class="fa fa-th-large" aria-hidden="true" style="font-size: 23px;"></i></span>
+	        <!--refresh-->
+				        	<span class="fa fa-repeat float-right mt-4 ml-3 mr-3" aria-hidden="true" style="font-size: 23px;"></span>
+
+				</div>
+
+		</div>
+
+<!-- add new note -->
 					<div class="row">
-						<div class="col-4 card" id="cards" class="slideanim">				<!--slideanim-->
-							<div class="container" style="background-color:yellow;">
-							    <h4><b>title</b><hr></h4>
-							    <p>Add notes...</p>
-
-
-		<!-- for onclick show the icons-->
-	<!--user_icon-->			    <div class="user_icon"> 
-									    <p id="demo"></p>
-		<!--hand-->						<div type="button" class="hand"
-											onclick="document.getElementById('demo').innerHTML = Date()" >
-											<img src="image\hand.png" style="width:20px;height:20px;"></div>
-										<p id="demo1"></p>
-		<!--user-->							<div type="button" class="user"
-											onclick="document.getElementById('demo1').innerHTML " >
-											<img src="image\user.png" style="width:20px;height:20px;"></div>
-										<p id="demo2"></p>
-		<!--color-->							<div type="button" class="color"
-											onclick="document.getElementById('demo2').innerHTML " >
-											<img src="image\color.png" style="width:15px;height:15px;"></div>
-										<p id="demo3"></p>
-		<!--picture	-->					<div type="button" class="picture"
-											onclick="document.getElementById('demo3').innerHTML " >
-											<img src="image\uploadimg.png" style="width:15px;height:15px;"></div>
-										<p id="demo4"></p>
-		<!--archive	-->					<div type="button" class="archive"
-											onclick="document.getElementById('demo4').innerHTML " >
-											<img src="image\archive.png" style="width:15px;height:15px;"></div>
-										<p id="demo5"></p>
-		<!--more option-->							<div type="button" class="more"
-											onclick="document.getElementById('demo5').innerHTML " >
-											<img src="image\more.png" style="width:15px;height:15px;"></div>
-									</div>
-		<!-- for onclick show the icons-->
-								 <div type="button" class="hover1"
-										onclick="document.getElementById('cards').innerHTML = show()" >
-								</div>
-								
+						<div class="col-lg-4">	</div>
+						<div class="col-lg-4">
+							<div class="nav_1 form-group mt-5 mb-5 ml-3">
+								<input type="text" class="form-control h-100" name="search" placeholder="TAKE A NOTES...">
 							</div>
 						</div>
+						<div class="col-lg-4"></div>
+					</div>
 
-						<div class="col-4 card"  class="slideanim" style="background-color:lightgreen;">		<!--slideanim-->
+<!-- card -->
+			<div class="row">
+				<div class="col-lg-4"></div>
+				<div class="col-lg-4">
+					<div class="card w-75 h-100" id="cards" class="slideanim"  >
 
-						  <div class="container">
-						    <h4><b>title</b><hr></h4> 
-						    <p>Add notes...</p> 
-	<!--user_icon-->			    <div class="user_icon"> 
-									    <p id="demo"></p>
-		<!--hand-->							<div type="button" class="hand"
-											onclick="document.getElementById('demo').innerHTML = Date()" >
-											<img src="image\hand.png" style="width:20px;height:20px;"></div>
-										<p id="demo1"></p>
-		<!--user-->							<div type="button" class="user"
-											onclick="document.getElementById('demo1').innerHTML " >
-											<img src="image\user.png" style="width:20px;height:20px;"></div>
-										<p id="demo2"></p>
-		<!--color-->							<div type="button" class="color"
-											onclick="document.getElementById('demo2').innerHTML " >
-											<img src="image\color.png" style="width:15px;height:15px;"></div>
-										<p id="demo3"></p>
-		<!--picture-->							<div type="button" class="picture"
-											onclick="document.getElementById('demo3').innerHTML " >
-											<img src="image\uploadimg.png" style="width:15px;height:15px;"></div>
-										<p id="demo4"></p>
-		<!--archive-->							<div type="button" class="archive"
-											onclick="document.getElementById('demo4').innerHTML " >
-											<img src="image\archive.png" style="width:15px;height:15px;"></div>
-										<p id="demo5"></p>
-		<!--more option-->							<div type="button" class="more"
-											onclick="document.getElementById('demo5').innerHTML " >
-											<img src="image\more.png" style="width:15px;height:15px;"></div>
-									</div>
-		<!-- for onclick show the icons-->
-								 <div type="button" class="hover1"
-										onclick="document.getElementById('cards').innerHTML = show()" >
+							<div class="row" data-toggle="modal" data-target="#myModal">
+								<div class="col-lg-10">
+										<form class="mt-2 ml-2 mr-2">
+											<input type="text" id="fname" name="fname" Placeholder="Title" class="mt-2 ml-2" style="width:100%">
+										</form>
 								</div>
-						  </div>
-						</div>
-
-						<div class="col-4 card"  class="slideanim" style="background-color:skyblue;">		<!--slideanim-->
-						  <div class="container">
-						    <h4><b>title</b><hr></h4> 
-						    <p>Add notes...</p> 
-	<!--user_icon-->			    <div class="user_icon"> 
-									    <p id="demo"></p>
-		<!--hand-->							<div type="button" class="hand"
-											onclick="document.getElementById('demo').innerHTML = Date()" >
-											<img src="image\hand.png" style="width:20px;height:20px;"></div>
-										<p id="demo1"></p>
-		<!--user-->							<div type="button" class="user"
-											onclick="document.getElementById('demo1').innerHTML " >
-											<img src="image\user.png" style="width:20px;height:20px;"></div>
-										<p id="demo2"></p>
-		<!--color-->							<div type="button" class="color"
-											onclick="document.getElementById('demo2').innerHTML " >
-											<img src="image\color.png" style="width:15px;height:15px;"></div>
-										<p id="demo3"></p>
-		<!--picture-->							<div type="button" class="picture"
-											onclick="document.getElementById('demo3').innerHTML " >
-											<img src="image\uploadimg.png" style="width:15px;height:15px;"></div>
-										<p id="demo4"></p>
-		<!--archive-->							<div type="button" class="archive"
-											onclick="document.getElementById('demo4').innerHTML " >
-											<img src="image\archive.png" style="width:15px;height:15px;"></div>
-										<p id="demo5"></p>
-		<!--more option-->							<div type="button" class="more"
-											onclick="document.getElementById('demo5').innerHTML " >
-											<img src="image\more.png" style="width:15px;height:15px;"></div>
-									</div>
-		<!-- for onclick show the icons-->
-								 <div type="button" class="hover1"
-										onclick="document.getElementById('cards').innerHTML = show()" >
+								<div class="col-lg-2">
+										<span class="mt-3 mr-4 float-right" style="margin-top: 10px;"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span>
 								</div>
-						  </div>
-						</div>
+							</div>
+
+							<div class="row" data-toggle="modal" data-target="#myModal">
+								<div class="col-lg-12">
+									<form class="mt-3 ml-3 mr-3">
+	 									<textarea class="mt-2" placeholder="Add Notes..." style="width:100%"></textarea>
+	 								</form>
+								</div>
+							</div>
+					<!-- for onclick show the icons-->
+					<!--user_icon-->
+								<div class="footer">
+					<!--hand-->
+										<span class="float-left mt-4 ml-3 mr-3"><i class="fa fa-bell-o" aria-hidden="true" data-toggle="tooltip" title="Remind Me" style="font-size: 15px;"></i></span>
+
+										<span class="float-left mt-4 ml-3 mr-3"><i class="fa fa-user-o" aria-hidden="true" data-toggle="tooltip" title="Collaborater" style="font-size: 15px;"></i></span>
+
+										<span class="float-left mt-4 ml-3 mr-3"><i class="fa fa-tachometer" aria-hidden="true" data-toggle="tooltip" title="Change Color" style="font-size: 15px;"></i></span>
+
+										<span class="float-left mt-4 ml-3 mr-3"><i class="fa fa-file-image-o" aria-hidden="true" data-toggle="tooltip" title="Add image" style="font-size: 15px;"></i></span>
+
+										<span class="float-left mt-4 ml-3 mr-3"><i class="fa fa-arrow-circle-o-down" aria-hidden="true" data-toggle="tooltip" title="Archive" style="font-size: 15px;"></i></span>
+
+										<span class="float-left mt-4 ml-3 mr-3"><i class="fa fa-ellipsis-v" aria-hidden="true" data-toggle="dropdown" title="More" style="font-size: 15px;"></i></span>
+											<div class="dropdown-menu">
+												<a class="dropdown-item" href="#">Delete Node</a>
+												<a class="dropdown-item" href="#">Add Label</a>
+												<a class="dropdown-item" href="#">Add drawing</a>
+												<a class="dropdown-item" href="#">Make a copy</a>
+												<a class="dropdown-item" href="#">Show tick boxes</a>
+												<a class="dropdown-item" href="#">Copy to Google Docs</a>
+											</div>
+										<span class="float-left mt-4 ml-3 mr-3"><i class="fa fa-undo" aria-hidden="true" data-toggle="tooltip" title="undo" style="font-size: 15px;color:lightgrey;cursor: not-allowed;"></i></span>
+
+										<span class="float-left mt-4 ml-3 mr-3"><i class="fa fa-repeat" aria-hidden="true" data-toggle="tooltip" title="Redo" style="font-size: 15px;color:lightgrey;cursor: not-allowed;"></i></span>
+							 </div>
 					</div>
 				</div>
-
 			</div>
 
-		</aside>
+<!-- class="fa fa-ban" usng for disabled -->
+
+
+				<!-- The Modal -->
+				 <div class="modal" id="myModal">
+					 <div class="modal-dialog modal-dialog-centered">
+						 <div class="modal-content">
+
+							 <!-- Modal Header -->
+							 <div class="modal-header">
+									 <form>
+									   <input type="text" id="fname" name="fname" Placeholder="Title" class="col-lg-12 mt-2 ml-2">
+									 </form>
+									 <span class="mt-2" style="margin-left: 200px;margin-top: 10px;"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span>
+									 <hr>
+							 </div>
+
+							 <!-- Modal body -->
+							 <div class="modal-body">
+								 <form class="mr-3">
+									  <textarea class="mt-2 ml-1 col-lg-12" placeholder="Add Notes..."></textarea>
+									</form>
+							 </div>
+
+							 <!-- Modal footer -->
+							 <div class="modal-footer">
+								 <span class="float-left mt-4 mr-3"><i class="fa fa-bell-o" aria-hidden="true" data-toggle="tooltip" title="Remind Me" style="font-size: 15px;"></i></span>
+
+									<span class="float-left mt-4 ml-3 mr-3"><i class="fa fa-user-o" aria-hidden="true" data-toggle="tooltip" title="Collaborater" style="font-size: 15px;"></i></span>
+
+									<span class="float-left mt-4 ml-3 mr-3"><i class="fa fa-tachometer" aria-hidden="true" data-toggle="tooltip" title="Change Color" style="font-size: 15px;"></i></span>
+
+									<span class="float-left mt-4 ml-3 mr-3"><i class="fa fa-file-image-o" aria-hidden="true" data-toggle="tooltip" title="Add image" style="font-size: 15px;"></i></span>
+
+									<span class="float-left mt-4 ml-3 mr-3"><i class="fa fa-arrow-circle-o-down" aria-hidden="true" data-toggle="tooltip" title="Archive" style="font-size: 15px;"></i></span>
+
+									<span class="float-left mt-4 ml-3 mr-3"><i class="fa fa-ellipsis-v" aria-hidden="true" data-toggle="tooltip" title="More" style="font-size: 15px;"></i></span>
+
+									<span class="float-left mt-4 ml-3 mr-3"><i class="fa fa-undo" aria-hidden="true" data-toggle="tooltip" title="undo" style="font-size: 15px;color:lightgrey;cursor: not-allowed;"></i></span>
+
+									<span class="float-left mt-4 ml-3" style="margin-right:65px;"><i class="fa fa-repeat" aria-hidden="true" data-toggle="tooltip" title="Redo" style="font-size: 15px;color:lightgrey;cursor: not-allowed;"></i></span>
+			 <!-- for onclick show the icons-->
+								 <button type="button" class="btn btn-sm btn-link " data-dismiss="modal" style="margin-top:24px;">Close</button>
+							 </div>
+
+						 </div>
+					 </div>
+				 </div>
+
+</div>
+
+
+<!--script -->
+<script type="text/javascript">
+		function changeImage(a) {
+				document.getElementById("img").src=a.src;
+		}
+</script>
+
+<script>
+function openNav() {
+		// document.getElementById("mySidenav").style.display = "none";
+		document.getElementById("mySidenav").style.width = "20%";
+		document.getElementById("main").style.marginLeft = "20%";
+}
+
+function closeNav() {
+		document.getElementById("mySidenav").style.width = "0";
+		document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
 
 	</body>
 
